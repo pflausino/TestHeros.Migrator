@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FluentNHibernate.Cfg;
+using FluentNHibernate.Cfg.Db;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -10,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using TestHeros.Migrator.Api.Filters;
 
 namespace TestHeros.Migrator.Api
 {
@@ -26,8 +29,23 @@ namespace TestHeros.Migrator.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-        }
 
+            var connectionString = Configuration["ConnectionString"];
+
+            var _sessionFactory = Fluently.Configure()
+                .Database(MsSqlConfiguration.MsSql2012.ConnectionString(connectionString))
+                .BuildSessionFactory();
+
+            services.AddSingleton(factory =>
+            {
+                return _sessionFactory.OpenSession();
+            });
+
+            services.AddControllers(opt =>
+            {
+                opt.Filters.Add<NHibernateSessionFilter>();
+            });
+        }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {

@@ -5,4 +5,12 @@
   </PropertyGroup>
 
 
+  <ItemGroup>
+    <PackageReference Include="NHibernate" Version="5.2.7" />
+    <PackageReference Include="FluentNHibernate" Version="2.1.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Filters\" />
+  </ItemGroup>
 </Project>

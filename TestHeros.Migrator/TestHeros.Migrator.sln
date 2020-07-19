@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestHeros.Migrator.Api", "TestHeros.Migrator.Api\TestHeros.Migrator.Api.csproj", "{99529C7D-CADD-41DC-8A92-FB97246FB5BC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestHeros.Migrator.Domain", "TestHeros.Migrator.Domain\TestHeros.Migrator.Domain.csproj", "{95182E3B-C5E1-44E4-9729-E7C3B8AEDB38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestHeros.Migrator.Data", "TestHeros.Migrator.Data\TestHeros.Migrator.Data.csproj", "{A7DA0202-A8A7-490F-8668-5EBFBBF330B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,5 +17,13 @@ Global
 		{99529C7D-CADD-41DC-8A92-FB97246FB5BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99529C7D-CADD-41DC-8A92-FB97246FB5BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99529C7D-CADD-41DC-8A92-FB97246FB5BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95182E3B-C5E1-44E4-9729-E7C3B8AEDB38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95182E3B-C5E1-44E4-9729-E7C3B8AEDB38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95182E3B-C5E1-44E4-9729-E7C3B8AEDB38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95182E3B-C5E1-44E4-9729-E7C3B8AEDB38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7DA0202-A8A7-490F-8668-5EBFBBF330B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7DA0202-A8A7-490F-8668-5EBFBBF330B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7DA0202-A8A7-490F-8668-5EBFBBF330B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7DA0202-A8A7-490F-8668-5EBFBBF330B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
