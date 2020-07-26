@@ -14,6 +14,7 @@ namespace TestHeros.Migrator.Domain.Entities
         public virtual int Strong { get; set; }
         public virtual int Intelligent { get; set; }
         public virtual int Resistence { get; set; }
+        public virtual Vehicle MainVehicle { get; set; }
     }
 }
 
